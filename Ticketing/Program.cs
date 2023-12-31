@@ -26,12 +26,19 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
-// Add services to the container.
+#region Register Interfaces
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<ITicketServices, TicketServices>();
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IJWTManagerServices, JWTManagerServices>();
+builder.Services.AddScoped<ITicketManagerRepository, TicketManagerRepository>();
+builder.Services.AddScoped<ITicketManagerServices, TicketManagerServices>();
+#endregion
+
+
+// Add services to the container.
+
 
 
 builder.Services.AddControllers();

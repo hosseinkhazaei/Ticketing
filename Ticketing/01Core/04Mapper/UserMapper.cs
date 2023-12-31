@@ -11,7 +11,8 @@ namespace Ticketing._01Core._04Mapper
             {
                 Id = user.Id,
                 Password = user.Password,
-                UserName = user.Password
+                UserName = user.UserName,
+                RoleName = user.IsAdmin ? "Admin" : "User"
             };
         }
         public static User ToModel(this SimpleUserDto model)
@@ -20,7 +21,8 @@ namespace Ticketing._01Core._04Mapper
             {
                 Id = Guid.NewGuid(),
                 Password = model.Password,
-                UserName = model.Password
+                UserName = model.UserName,
+                IsAdmin = model.IsAdmin,
             };
         }
     }

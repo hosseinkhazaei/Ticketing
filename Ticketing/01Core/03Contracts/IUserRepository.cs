@@ -6,6 +6,6 @@ namespace Ticketing._01Core._03Contracts
     public interface IUserRepository
     {
         User Login(SimpleUserDto model);
-        User AddUser(User model);
+        User Register(User model);
     }
 }

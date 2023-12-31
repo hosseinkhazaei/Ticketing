@@ -8,5 +8,4 @@ namespace Ticketing._01Core.Services
         SimpleTicketDto AddTicket(AddTicketDto model);
         SimpleTicketDto GetTicket(SimpleSearchTicket model);
     }
-
 }

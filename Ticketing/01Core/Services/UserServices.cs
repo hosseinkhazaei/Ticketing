@@ -12,10 +12,10 @@ namespace Ticketing._01Core.Services
         {
             _userRepository = userRepository;
         }
-        public UserDto AddUser(SimpleUserDto model)
+        public UserDto Register(SimpleUserDto model)
         {
             var user = model.ToModel();
-            return _userRepository.AddUser(user).ToDto();
+            return _userRepository.Register(user).ToDto();
         }
 
         public UserDto Login(SimpleUserDto model)

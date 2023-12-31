@@ -4,7 +4,7 @@ namespace Ticketing._01Core.Services
 {
     public interface IUserServices
     {
-        UserDto AddUser(SimpleUserDto model);
+        UserDto Register(SimpleUserDto model);
         UserDto Login(SimpleUserDto model);
     }
 }

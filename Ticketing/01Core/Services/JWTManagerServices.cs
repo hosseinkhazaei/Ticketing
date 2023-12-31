@@ -39,7 +39,7 @@ namespace Ticketing._01Core.Services
                 Subject = new ClaimsIdentity(new Claim[]
               {
              new Claim(ClaimTypes.Name, model.UserName),
-
+             new Claim(ClaimTypes.Role, user.RoleName),
               }),
                 Expires = DateTime.Now.AddMinutes(10),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)

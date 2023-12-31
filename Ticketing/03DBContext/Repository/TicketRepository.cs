@@ -26,4 +26,17 @@ namespace Ticketing._03DBContext.Repository
             return model;
         }
     }
+
+    public class TicketManagerRepository : ITicketManagerRepository
+    {
+        public List<Ticket> GetAll()
+        {
+            var result = new List<Ticket>();
+            using (var db = new TicketDbContext())
+            {
+                result = db.Tickets.ToList();
+            }
+            return result;
+        }
+    }
 }

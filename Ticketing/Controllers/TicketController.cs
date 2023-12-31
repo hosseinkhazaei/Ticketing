@@ -7,7 +7,7 @@ using Ticketing._01Core.Services;
 
 namespace Ticketing.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "User")]
     [ApiController]
     [Route("api/[controller]")]
     public class TicketController : ControllerBase

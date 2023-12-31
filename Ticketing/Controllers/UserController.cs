@@ -32,7 +32,7 @@ namespace Ticketing.Controllers
                 {
                     return BadRequest();
                 }
-                var user = _userServices.AddUser(model);
+                var user = _userServices.Register(model);
                 return Created(new Uri(Request.GetEncodedUrl() + "/" + user.Id), user);
             }
             catch (Exception)

@@ -6,7 +6,7 @@ namespace Ticketing._03DBContext.Repository
 {
     public class UserRepository : IUserRepository
     {
-        public User AddUser(User model)
+        public User Register(User model)
         {
             using (var db = new TicketDbContext())
             {
